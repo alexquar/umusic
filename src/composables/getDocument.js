@@ -9,7 +9,7 @@ const getDocument = (collection, id) => {
   // register the firestore collection reference
   let documentRef = projectFirestore.collection(collection).doc(id)
 
-  const unsub = documentRef.onSnapshot(snap => {
+  const unsub = documentRef.onSnapshot(doc => {
     if(doc.data()){
 document.value = {...doc.data(), id : doc.id}
 error.value = null 
