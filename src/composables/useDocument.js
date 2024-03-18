@@ -20,7 +20,20 @@ const deleteDoc = async ()=>{
     }
 }
 
-return {error, isPending, deleteDoc}
+const updateDoc = async (updates)=>{
+    isPending.value = true
+    error.value = null
+    try{
+    const res = await docRef.update(updates)
+    return res
+    } catch (err){
+        console.log(err.message)
+        isPending.value = false
+        error.value = "could not edit playlist"
+    }
+}
+
+return {error, isPending, deleteDoc, updateDoc}
 }
 
 

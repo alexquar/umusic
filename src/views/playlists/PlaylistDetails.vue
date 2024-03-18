@@ -16,6 +16,9 @@
       <!-- song list -->
       <div class="song-list">
         <p>Song list</p>
+        <div v-for="song in playlist.songs" :key="song.id">
+        {{ song }}
+        </div>
         <AddSong v-if="ownership" :playlist="playlist"/>
       </div>
       
