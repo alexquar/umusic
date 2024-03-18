@@ -1,6 +1,6 @@
 import { ref, watchEffect } from 'vue'
 import { projectFirestore } from '../firebase/config'
-//sets up real time event listener for a collection
+
 const getCollection = (collection) => {
 
   const documents = ref(null)
@@ -25,7 +25,7 @@ const getCollection = (collection) => {
     documents.value = null
     error.value = 'could not fetch the data'
   })
-//unsub from real time listener
+
   watchEffect((onInvalidate) => {
     onInvalidate(() => unsub());
   });
