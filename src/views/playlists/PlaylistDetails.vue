@@ -37,7 +37,7 @@
     .playlist-details {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 80px;
+      gap: 81px;
     }
     .cover {
       overflow: hidden;
