@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div v-if="error" class="error">Could not fetch the data</div>
+    <h2>Public Playlists</h2>
     <div v-if="documents">
       <ListView :playlists="documents" />
     </div>
