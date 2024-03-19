@@ -3,7 +3,7 @@
       <button v-if="!showForm" @click="showForm = true">Add Songs</button>
       <form v-if="showForm" @submit.prevent="handleSubmit">
         <h4>Add a New Song</h4>
-        <button @click="showForm = false">cancel</button>
+        <button @click="showForm = false">Cancel</button>
         <input type="text" placeholder="Song title" required v-model="title">
         <input type="text" placeholder="Artist" required v-model="artist">
         <button>Add</button>
