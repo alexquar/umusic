@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="user-playlist">
+        <h2>My Playlists</h2>
     </div>
 </template>
 
@@ -10,6 +10,6 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
